@@ -12,7 +12,7 @@ known_path = os.path.join(os.getcwd(), "Images/Known_faces/")
 unknown_path = os.path.join(os.getcwd(), "Images/Unknown_faces/")
 def get_data():
     global db
-    con = conn.connect(host='yourhost', database='yourdb',user='youruesrname', password='yourpassword', charset='utf8', port=yourportnumber)
+    con = conn.connect(host='localhost', database='agency',user='', password='', charset='utf8', port=3306)
     cursor = con.cursor()
     sql = 'select * from register'
     cursor.execute(sql)
