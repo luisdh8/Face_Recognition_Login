@@ -13,7 +13,7 @@ known_path = os.path.join(os.getcwd(), "Images/Known_faces/")
 unknown_path = os.path.join(os.getcwd(), "Images/Unknown_faces/")
 def get_data():
     global db
-    con = conn.connect(host='localhost', database='agency',user='', password='', charset='utf8', port=3306)
+    con = conn.connect(host='localhost', database='agency',user='root', password='', charset='utf8', port=3306)
     cursor = con.cursor()
     sql = 'select * from register'
     cursor.execute(sql)
@@ -36,7 +36,7 @@ def index():
 
 @app.route('/register', methods=['GET'])
 def register():
-    con = conn.connect(host='yourhost', database='yourdb',user='youruesrname', password='yourpassword', charset='utf8', port=yourportnumber)
+    con = conn.connect(host='localhost', database='agency',user='root', password='', charset='utf8', port=3306)
     cursor = con.cursor()
     sql = 'insert into register values(%s,%s)'
     name = request.args.get("name")
